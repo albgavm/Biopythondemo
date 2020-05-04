@@ -5,10 +5,12 @@ class dna():
     def __init__(self, seq):
         self.seq = seq
 
-    def makeseq():
+    def makeseq(self):
+        self.list = yield(for char in self.seq)
         # makes a sequence list from a string
 
-    def transcribe():
+    def transcribe(self):
+        for na in self.list, if == a then = u
 
     def translate():
         #translates directly to protein
