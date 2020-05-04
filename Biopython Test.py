@@ -10,7 +10,7 @@ class dna():
         # makes a sequence list from a string
 
     def transcribe(self):
-        for na in self.list, if == a then = u
+        for na in self.list, if na == "a" then = "u"
 
     def translate():
         #translates directly to protein
