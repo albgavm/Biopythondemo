@@ -2,16 +2,23 @@
 
 class dna():
 
+
     def __init__(self, seq):
-        self.seq = seq
-        return [char for char in self.seq]
+        #seq has to be string
+        #make a str and then make a list
+        #DONE
+        str(seq)
+        self.seq = list(seq.lower())
 
     def makeseq(self):
         # makes a sequence list from a string
-        self.list = yield(for char in self.seq)
+        #notDone
+        self.seq = yield(for char in self.seq)
 
     def show(self):
-        #makes a string from self.list
+        #prints the string version
+        #DONE
+        print(str(self.seq))
 
     def transcribe(self):
         # converts the a to u
