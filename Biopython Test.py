@@ -10,10 +10,8 @@ class dna():
         str(seq)
         self.seq = list(seq.lower())
 
-    def makeseq(self):
-        # makes a sequence list from a string
-        #notDone
-        self.seq = yield(for char in self.seq)
+    def showlist(self):
+        print(self.seq)
 
     def show(self):
         #prints the string version
@@ -22,16 +20,16 @@ class dna():
 
     def transcribe(self):
         # converts the a to u
-        for na in self.list:
+        #done
+        for index, na in enumerate(self.seq):
             if na == "a":
-                na = "u"
+                self.seq[index] = "u"
             elif na == "A":
-                na = "U"
-            else:
-                return
+                self.seq[index] = "U"
+
     def translate():
         # translates directly to protein
-        for na in self.list:
+        for index, na in enumerate(self.seq):
             if na == ""
 
 
