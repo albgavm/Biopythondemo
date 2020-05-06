@@ -27,14 +27,83 @@ class dna():
             elif na == "A":
                 self.seq[index] = "U"
 
-    def translate():
+    def translate(self):
         # translates directly to protein
         for index, na in enumerate(self.seq):
-            if na == ""
+        #NEED TO FIX TRIPLE CODON ERROR
+            #Codon Starts with A
+            if self.seq[index] == "a":
+
+                if self.seq[index + 1] =="a":
+                    if self.seq[index + 2]=="a":
+                    elif self.seq[index + 2]=="t":
+                    elif self.seq[index + 2]=="g":
+                    elif self.seq[index + 2]== "c":
+
+                if self.seq[index + 1] =="t":
+
+                    if self.seq[index + 2]=="a":
+                    elif self.seq[index + 2]=="t":
+                    elif self.seq[index + 2]=="g":
+                    elif self.seq[index + 2] == "c":
+
+                if self.seq[index + 1] =="g":
+                    if self.seq[index + 2]=="a":
+                    elif self.seq[index + 2]=="t":
+                    elif self.seq[index + 2]=="g":
+                    elif self.seq[index + 2]== "c":
+
+                if self.seq[index + 1] =="c":
+                    if self.seq[index + 2]=="a":
+                    elif self.seq[index + 2]=="t":
+                    elif self.seq[index + 2]=="g":
+                    elif self.seq[index + 2]== "c":
+                        else:
+                            print("codon error")
+
+
+
+            # Codon Starts with t
+            if self.seq[index] == "t":
+
+                if self.seq[index + 1] =="a":
+                    if self.seq[index + 2]=="a":
+                    elif self.seq[index + 2]=="t":
+                    elif self.seq[index + 2]=="g":
+                    elif self.seq[index + 2] == "c":
+                    else:
+                        print("codon error")
+
+                if self.seq[index + 1] =="t":
+
+                    if self.seq[index + 2]=="a":
+                    elif self.seq[index + 2]=="t":
+                    elif self.seq[index + 2]=="g":
+                    elif self.seq[index + 2]== "c":
+                    else:
+                        print("codon error")
+
+                if self.seq[index + 1] =="g":
+
+                    if self.seq[index + 2]=="a":
+                    elif self.seq[index + 2] == "t":
+                    elif self.seq[index + 2] == "g":
+                    elif self.seq[index + 2] == "c":
+                    else:
+                        print("codon error")
+
+                if self.seq[index + 1] =="c":
+                    if self.seq[index + 2]=="a":
+                    elif self.seq[index + 2]=="t":
+                    elif self.seq[index + 2]=="g":
+                    elif self.seq[index + 2]== "c":
+                    else:
+                        print("codon error")
+
 
 
     def search():
-        #searches the sequence for a pattern
+        #searches the sequence for a pattern returns true
 
     def count():
         #searches the pattern in the instance of the class
