@@ -9,6 +9,8 @@ class dna():
         #DONE
         str(seq)
         self.seq = list(seq.lower())
+        #empty protein
+        self.protein = []
 
     def showlist(self):
         print(self.seq)
@@ -28,10 +30,12 @@ class dna():
                 self.seq[index] = "U"
 
     def translate(self):
-        # translates directly to protein
+        # translates directly to protein, appends to self.protein
+
         for index, na in enumerate(self.seq):
         #NEED TO FIX TRIPLE CODON ERROR
             #Codon Starts with A
+
             if self.seq[index] == "a":
 
                 if self.seq[index + 1] =="a":
