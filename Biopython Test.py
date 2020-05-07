@@ -2,7 +2,6 @@
 
 class dna():
 
-
     def __init__(self, seq):
         #seq has to be string
         #make a str and then make a list
@@ -11,6 +10,7 @@ class dna():
         self.seq = list(seq.lower())
         #empty protein
         self.protein = []
+        self.compliment = []
 
     def showlist(self):
         print(self.seq)
@@ -40,6 +40,10 @@ class dna():
 
                 if self.seq[index + 1] =="a":
                     if self.seq[index + 2]=="a":
+
+                    self.protein.append("k")
+
+
                     elif self.seq[index + 2]=="t":
                     elif self.seq[index + 2]=="g":
                     elif self.seq[index + 2]== "c":
@@ -64,8 +68,6 @@ class dna():
                     elif self.seq[index + 2]== "c":
                         else:
                             print("codon error")
-
-
 
             # Codon Starts with t
             if self.seq[index] == "t":
@@ -104,15 +106,47 @@ class dna():
                     else:
                         print("codon error")
 
+    def compliment(self):
+        #makes a complimentary strand
+        for index, na in enumerate(self.seq):
+            if na == "a":
+                self.compliment.append("t")
+            elif na == "A":
+                self.compliment.append("T")
+            elif na == "t":
+                self.compliment.append("a")
+            elif na == "T":
+                self.compliment.append("A")
+            elif na == "g":
+                self.compliment.append("c")
+            elif na == "G":
+                self.compliment.append("C")
+            elif na == "C":
+                self.compliment.append("g")
+            elif na == "C":
+                self.compliment.append("C")
+            else:
+                print("Error Cannot Compliment")
 
-
-    def search():
+    def search(self):
         #searches the sequence for a pattern returns true
 
     def count():
         #searches the pattern in the instance of the class
         #how many patterns are in the DNA sequence
 
-    def reversetranscribe(self):
+    def reverse(self):
         #reverse transcribes from RNA to DNA
-        attributes = [a for a in dir(seq) if not a.startswith("_")
+        for index, na in enumerate(self.seq):
+            if na == "u":
+                self.seq[index] = "a"
+            elif na == "U":
+                self.seq[index] = "A"
+
+    def gccontent():
+        #percentage gccontent
+
+    def searchstopcodon():
+        #search a stop codon
+
+
