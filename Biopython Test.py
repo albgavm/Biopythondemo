@@ -68,17 +68,25 @@ class dna():
 
                 if self.seq[index + 1] =="g":
                     if self.seq[index + 2]=="a":
+                        self.protein.append("r")
                     elif self.seq[index + 2]=="t":
+                        self.protein.append("s")
                     elif self.seq[index + 2]=="g":
+                        self.protein.append("r")
                     elif self.seq[index + 2]== "c":
+                        self.protein.append("s")
 
                 if self.seq[index + 1] =="c":
                     if self.seq[index + 2]=="a":
+                        self.protein.append("t")
                     elif self.seq[index + 2]=="t":
+                        self.protein.append("t")
                     elif self.seq[index + 2]=="g":
+                        self.protein.append("t")
                     elif self.seq[index + 2]== "c":
-                        else:
-                            print("codon error")
+                        self.protein.append("t")
+            else:
+                print("codon error")
 
             # Codon Starts with t
             if self.seq[index] == "t":
