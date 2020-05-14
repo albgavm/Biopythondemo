@@ -33,7 +33,8 @@ class dna():
         # translates from DNA directly to protein, appends to self.protein
 
         for index, na in enumerate(self.seq):
-        #NEED TO FIX TRIPLE CODON reading fram ERROR
+        #NEED TO FIX TRIPLE CODON reading frame ERROR
+        #triple codon reading frame ---> IDEA MAKE INTO LIST OF LIST with three on the entire list.
         #need to fix if no codon at the end
             #Codon Starts with A
 
