@@ -148,8 +148,9 @@ class dna():
             else:
                 print("Error Cannot Compliment")
 
-    def search(self):
-        pass
+    def search(self, searched_variable):
+        len(searched_variable)
+
         #searches the sequence for a pattern returns true
 
     def count():
