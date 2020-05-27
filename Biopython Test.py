@@ -30,8 +30,29 @@ class dna():
                 self.seq[index] = "U"
 
     def translate(self):
-        # translates from DNA directly to protein, appends to self.protein
 
+        #Makes a nested list with codons separated
+        self.codon = []
+        self.length = len(self.seq)
+        self.codon_number = (length // 3)
+        print(self.codon_number) #just to test
+
+        self.dna_index = 0
+        self.codon_counter = 0
+
+        #makes blank nested lists based on #of codons
+        while self.codon_counter != self.codon_number:
+            self.codon_counter = self.codon_counter + 1
+            self.codon.append([])
+
+        for empty_codon in self.codon:
+            empty_codon.append(self.seq[self.dna_index])
+            empty_codon.append(self.seq[self.dna_index + 1])
+            empty_codon.append(self.seq[self.dna_index + 2])
+            self.dna_index = self.dna_index + 3
+
+
+        # translates from DNA directly to protein, appends to self.protein
         for index, na in enumerate(self.seq):
         #NEED TO FIX TRIPLE CODON reading frame ERROR
         #triple codon reading frame ---> IDEA MAKE INTO LIST OF LIST with three on the entire list.
