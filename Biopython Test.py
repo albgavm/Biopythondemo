@@ -45,7 +45,7 @@ class dna():
             self.codon_counter = self.codon_counter + 1
             self.codon.append([])
 
-        #attaches the sequence by threes
+        #attaches the sequence by threes to self.codon
         for empty_codon in self.codon:
             empty_codon.append(self.seq[self.dna_index])
             empty_codon.append(self.seq[self.dna_index + 1])
@@ -54,33 +54,67 @@ class dna():
 
 
         # translates from DNA directly to protein, appends to self.protein
-        for first_index, codon in enumerate(self.seq):
-            for codon_index, na in enumerate(codon)
+        for first_index, codon_list in enumerate(self.codon):
 
-                #if codon na starts with A
-                if codon[codon_index] == "a":
-                    if codon[codon_index+1] =="a":
-                        if codon[codon_index+2] =="a":
-                            self.protein.append("k")
+            #starts with A
+            if codon_list[0] == "a":
 
-                        elif codon[codon_index + 2] == "t":
-                            self.protein.append("n")
+                if codon_list[1] == "a":
 
-                        elif codon[codon_index + 2] == "g":
-                            self.protein.append("k")
+                    if codon_list[2] == "a":
+                        self.protein.append("k")
+                    elif codon_list[2] == "t":
+                        self.protein.append("n")
+                    elif codon_list[2] == "g":
+                        self.protein.append("k")
+                    elif codon_list[2] == "c":
+                        self.protein.append("n")
+                    else:
+                        print("3rd codon error")
 
-                        elif codon[codon_index + 2] == "c":
-                            self.protein.append("n")
+                elif codon_list[1] =="t":
+                    if codon_list[2]=="a":
+                        self.protein.append("i")
+                    elif codon_list[2]=="t":
+                        self.protein.append("i")
+                    elif codon_list[2] =="g":
+                        self.protein.append("m-str")
+                    elif codon_list[2] =="c":
+                        self.protein.append("i")
+                    else:
+                        print("3rd codon error")
+
+
+                elif codon_list[1] =="g":
+                    if codon_list[2] =="a":
+                        self.protein.append("r")
+                    elif codon_list[2] =="t":
+                        self.protein.append("s")
+                    elif codon_list[2] =="g":
+                        self.protein.append("r")
+                    elif codon_list[2] == "c":
+                        self.protein.append("s")
+                    else:
+                        print("3rd codon error")
+
+                elif codon_list[1] =="c":
+                    if codon_list[2] =="a":
+                        self.protein.append("t")
+                    elif codon_list[2] =="t":
+                        self.protein.append("t")
+                    elif codon_list[2] =="g":
+                        self.protein.append("t")
+                    elif codon_list[2] == "c":
+                        self.protein.append("t")
+                    else:
+                        print("3rd codon error")
+                else:
+                    print("2nd codon error")
 
 
 
 
-
-
-
-
-
-        #NEED TO FIX TRIPLE CODON reading frame ERROR
+        #NEED finish T, G, and C codon
         #triple codon reading frame ---> IDEA MAKE INTO LIST OF LIST with three on the entire list.
         #need to fix if no codon at the end
             #Codon Starts with A
@@ -99,6 +133,8 @@ class dna():
 
                     elif self.seq[index + 2]== "c":
                         self.protein.append("n")
+                    else:
+                        print("codon error")
 
                 if self.seq[index + 1] =="t":
 
@@ -113,6 +149,8 @@ class dna():
 
                     elif self.seq[index + 2] == "c":
                         self.protein.append("i")
+                    else:
+                        print("codon error")
 
                 if self.seq[index + 1] =="g":
                     if self.seq[index + 2]=="a":
