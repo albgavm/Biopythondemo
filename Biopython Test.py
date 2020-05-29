@@ -45,6 +45,7 @@ class dna():
             self.codon_counter = self.codon_counter + 1
             self.codon.append([])
 
+        #attaches the sequence by threes
         for empty_codon in self.codon:
             empty_codon.append(self.seq[self.dna_index])
             empty_codon.append(self.seq[self.dna_index + 1])
@@ -53,7 +54,32 @@ class dna():
 
 
         # translates from DNA directly to protein, appends to self.protein
-        for index, na in enumerate(self.seq):
+        for first_index, codon in enumerate(self.seq):
+            for codon_index, na in enumerate(codon)
+
+                #if codon na starts with A
+                if codon[codon_index] == "a":
+                    if codon[codon_index+1] =="a":
+                        if codon[codon_index+2] =="a":
+                            self.protein.append("k")
+
+                        elif codon[codon_index + 2] == "t":
+                            self.protein.append("n")
+
+                        elif codon[codon_index + 2] == "g":
+                            self.protein.append("k")
+
+                        elif codon[codon_index + 2] == "c":
+                            self.protein.append("n")
+
+
+
+
+
+
+
+
+
         #NEED TO FIX TRIPLE CODON reading frame ERROR
         #triple codon reading frame ---> IDEA MAKE INTO LIST OF LIST with three on the entire list.
         #need to fix if no codon at the end
