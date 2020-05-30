@@ -34,7 +34,7 @@ class dna():
         #Makes a nested list with codons separated
         self.codon = []
         self.length = len(self.seq)
-        self.codon_number = (length // 3)
+        self.codon_number = (self.length // 3)
         print(self.codon_number) #just to test
 
         self.dna_index = 0
@@ -45,6 +45,8 @@ class dna():
             self.codon_counter = self.codon_counter + 1
             self.codon.append([])
 
+        print(self.codon)
+
         #attaches the sequence by threes to self.codon
         for empty_codon in self.codon:
             empty_codon.append(self.seq[self.dna_index])
@@ -52,6 +54,7 @@ class dna():
             empty_codon.append(self.seq[self.dna_index + 2])
             self.dna_index = self.dna_index + 3
 
+        print(self.codon)
 
         # translates from DNA directly to protein, appends to self.protein
         for first_index, codon_list in enumerate(self.codon):
@@ -111,8 +114,63 @@ class dna():
                 else:
                     print("2nd codon error")
 
+            #Codon starts with t
+            if codon_list[0] == "t":
+
+                if codon_list[1] == "a":
+                    if codon_list[2] == "a":
+                        self.protein.append("stop")
+                    elif codon_list[2] == "t":
+                        self.protein.append("y")
+                    elif codon_list[2] == "g":
+                        self.protein.append("stop")
+                    elif codon_list[2] == "c":
+                        self.protein.append("y")
+                    else:
+                        print("3rd codon error")
+
+                elif codon_list[1] == "t":
+                    if codon_list[2] == "a":
+                        self.protein.append("i")
+                    elif codon_list[2] == "t":
+                        self.protein.append("i")
+                    elif codon_list[2] == "g":
+                        self.protein.append("m-str")
+                    elif codon_list[2] == "c":
+                        self.protein.append("i")
+                    else:
+                        print("3rd codon error")
 
 
+                elif codon_list[1] == "g":
+                    if codon_list[2] == "a":
+                        self.protein.append("r")
+                    elif codon_list[2] == "t":
+                        self.protein.append("s")
+                    elif codon_list[2] == "g":
+                        self.protein.append("r")
+                    elif codon_list[2] == "c":
+                        self.protein.append("s")
+                    else:
+                        print("3rd codon error")
+
+                elif codon_list[1] == "c":
+                    if codon_list[2] == "a":
+                        self.protein.append("t")
+                    elif codon_list[2] == "t":
+                        self.protein.append("t")
+                    elif codon_list[2] == "g":
+                        self.protein.append("t")
+                    elif codon_list[2] == "c":
+                        self.protein.append("t")
+                    else:
+                        print("3rd codon error")
+                else:
+                    print("2nd codon error")
+
+        print(self.protein)
+
+'''
 
         #NEED finish T, G, and C codon
         #triple codon reading frame ---> IDEA MAKE INTO LIST OF LIST with three on the entire list.
@@ -233,6 +291,7 @@ class dna():
             else:
                 print("Error Cannot Compliment")
 
+
     def search(self, searched_variable):
         len(searched_variable)
 
@@ -271,6 +330,7 @@ class dna():
         print(self.protein)
         #prints self.protein
 
-
-
-
+'''
+dna1 = dna("aaaaat")
+dna1.translate()
+dna1.show()
