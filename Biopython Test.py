@@ -81,7 +81,7 @@ class dna():
                     elif codon_list[2]=="t":
                         self.protein.append("i")
                     elif codon_list[2] =="g":
-                        self.protein.append("m-str")
+                        self.protein.append("m-start")
                     elif codon_list[2] =="c":
                         self.protein.append("i")
                     else:
@@ -131,13 +131,121 @@ class dna():
 
                 elif codon_list[1] == "t":
                     if codon_list[2] == "a":
-                        self.protein.append("i")
+                        self.protein.append("l")
                     elif codon_list[2] == "t":
-                        self.protein.append("i")
+                        self.protein.append("f")
                     elif codon_list[2] == "g":
-                        self.protein.append("m-str")
+                        self.protein.append("l")
                     elif codon_list[2] == "c":
-                        self.protein.append("i")
+                        self.protein.append("f")
+                    else:
+                        print("3rd codon error")
+
+
+                elif codon_list[1] == "g":
+                    if codon_list[2] == "a":
+                        self.protein.append("stop-trp")
+                    elif codon_list[2] == "t":
+                        self.protein.append("c")
+                    elif codon_list[2] == "g":
+                        self.protein.append("stop-trp")
+                    elif codon_list[2] == "c":
+                        self.protein.append("c")
+                    else:
+                        print("3rd codon error")
+
+                elif codon_list[1] == "c":
+                    if codon_list[2] == "a":
+                        self.protein.append("s")
+                    elif codon_list[2] == "t":
+                        self.protein.append("s")
+                    elif codon_list[2] == "g":
+                        self.protein.append("s")
+                    elif codon_list[2] == "c":
+                        self.protein.append("s")
+                    else:
+                        print("3rd codon error")
+                else:
+                    print("2nd codon error")
+
+            # Codon starts with g
+            if codon_list[0] == "g":
+
+                if codon_list[1] == "a":
+                    if codon_list[2] == "a":
+                        self.protein.append("e")
+                    elif codon_list[2] == "t":
+                        self.protein.append("d")
+                    elif codon_list[2] == "g":
+                        self.protein.append("e")
+                    elif codon_list[2] == "c":
+                        self.protein.append("d")
+                    else:
+                        print("3rd codon error")
+
+                elif codon_list[1] == "t":
+                    if codon_list[2] == "a":
+                        self.protein.append("v")
+                    elif codon_list[2] == "t":
+                        self.protein.append("v")
+                    elif codon_list[2] == "g":
+                        self.protein.append("v")
+                    elif codon_list[2] == "c":
+                        self.protein.append("v")
+                    else:
+                        print("3rd codon error")
+
+
+                elif codon_list[1] == "g":
+                    if codon_list[2] == "a":
+                        self.protein.append("g")
+                    elif codon_list[2] == "t":
+                        self.protein.append("g")
+                    elif codon_list[2] == "g":
+                        self.protein.append("g")
+                    elif codon_list[2] == "c":
+                        self.protein.append("g")
+                    else:
+                        print("3rd codon error")
+
+                elif codon_list[1] == "c":
+                    if codon_list[2] == "a":
+                        self.protein.append("a")
+                    elif codon_list[2] == "t":
+                        self.protein.append("a")
+                    elif codon_list[2] == "g":
+                        self.protein.append("a")
+                    elif codon_list[2] == "c":
+                        self.protein.append("a")
+                    else:
+                        print("3rd codon error")
+                else:
+                    print("2nd codon error")
+
+            # Codon starts with c
+            if codon_list[0] == "c":
+
+                if codon_list[1] == "a":
+                    if codon_list[2] == "a":
+                        self.protein.append("q")
+                    elif codon_list[2] == "t":
+                        self.protein.append("h")
+                    elif codon_list[2] == "g":
+                        self.protein.append("q")
+                    elif codon_list[2] == "c":
+                        self.protein.append("h")
+                    else:
+                        print("3rd codon error")
+
+                elif codon_list[1] == "t":
+                    if codon_list[2] == "a":
+                        self.protein.append("l")
+                    elif codon_list[2] == "t":
+                        self.protein.append("l")
+                    elif codon_list[2] == "g":
+                        self.protein.append("l")
+                    elif codon_list[2] == "c":
+                        self.protein.append("l")
                     else:
                         print("3rd codon error")
 
@@ -146,128 +254,28 @@ class dna():
                     if codon_list[2] == "a":
                         self.protein.append("r")
                     elif codon_list[2] == "t":
-                        self.protein.append("s")
+                        self.protein.append("r")
                     elif codon_list[2] == "g":
                         self.protein.append("r")
                     elif codon_list[2] == "c":
-                        self.protein.append("s")
+                        self.protein.append("r")
                     else:
                         print("3rd codon error")
 
                 elif codon_list[1] == "c":
                     if codon_list[2] == "a":
-                        self.protein.append("t")
+                        self.protein.append("p")
                     elif codon_list[2] == "t":
-                        self.protein.append("t")
+                        self.protein.append("p")
                     elif codon_list[2] == "g":
-                        self.protein.append("t")
+                        self.protein.append("p")
                     elif codon_list[2] == "c":
-                        self.protein.append("t")
+                        self.protein.append("p")
                     else:
                         print("3rd codon error")
                 else:
                     print("2nd codon error")
-
         print(self.protein)
-
-'''
-
-        #NEED finish T, G, and C codon
-        #triple codon reading frame ---> IDEA MAKE INTO LIST OF LIST with three on the entire list.
-        #need to fix if no codon at the end
-            #Codon Starts with A
-
-            if self.seq[index] == "a":
-
-                if self.seq[index + 1] =="a":
-                    if self.seq[index + 2]=="a":
-                        self.protein.append("k")
-
-                    elif self.seq[index + 2]=="t":
-                        self.protein.append("n")
-
-                    elif self.seq[index + 2]=="g":
-                        self.protein.append("k")
-
-                    elif self.seq[index + 2]== "c":
-                        self.protein.append("n")
-                    else:
-                        print("codon error")
-
-                if self.seq[index + 1] =="t":
-
-                    if self.seq[index + 2]=="a":
-                        self.protein.append("i")
-
-                    elif self.seq[index + 2]=="t":
-                        self.protein.append("i")
-
-                    elif self.seq[index + 2]=="g":
-                        self.protein.append("m-str")
-
-                    elif self.seq[index + 2] == "c":
-                        self.protein.append("i")
-                    else:
-                        print("codon error")
-
-                if self.seq[index + 1] =="g":
-                    if self.seq[index + 2]=="a":
-                        self.protein.append("r")
-                    elif self.seq[index + 2]=="t":
-                        self.protein.append("s")
-                    elif self.seq[index + 2]=="g":
-                        self.protein.append("r")
-                    elif self.seq[index + 2]== "c":
-                        self.protein.append("s")
-
-                if self.seq[index + 1] =="c":
-                    if self.seq[index + 2]=="a":
-                        self.protein.append("t")
-                    elif self.seq[index + 2]=="t":
-                        self.protein.append("t")
-                    elif self.seq[index + 2]=="g":
-                        self.protein.append("t")
-                    elif self.seq[index + 2]== "c":
-                        self.protein.append("t")
-            else:
-                print("codon error")
-
-            # Codon Starts with t
-            if self.seq[index] == "t":
-
-                if self.seq[index + 1] =="a":
-                    if self.seq[index + 2]=="a":
-                    elif self.seq[index + 2]=="t":
-                    elif self.seq[index + 2]=="g":
-                    elif self.seq[index + 2] == "c":
-                    else:
-                        print("codon error")
-
-                if self.seq[index + 1] =="t":
-
-                    if self.seq[index + 2]=="a":
-                    elif self.seq[index + 2]=="t":
-                    elif self.seq[index + 2]=="g":
-                    elif self.seq[index + 2]== "c":
-                    else:
-                        print("codon error")
-
-                if self.seq[index + 1] =="g":
-
-                    if self.seq[index + 2]=="a":
-                    elif self.seq[index + 2] == "t":
-                    elif self.seq[index + 2] == "g":
-                    elif self.seq[index + 2] == "c":
-                    else:
-                        print("codon error")
-
-                if self.seq[index + 1] =="c":
-                    if self.seq[index + 2]=="a":
-                    elif self.seq[index + 2]=="t":
-                    elif self.seq[index + 2]=="g":
-                    elif self.seq[index + 2]== "c":
-                    else:
-                        print("codon error")
 
     def compliment(self):
         #makes a complimentary strand
