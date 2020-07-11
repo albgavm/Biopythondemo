@@ -7,6 +7,7 @@ class dna():
         #make a str and then make a list
         #DONE
         str(seq)
+        #self.seq is the main list
         self.seq = list(seq.lower())
         #empty protein list
         self.protein = []
@@ -278,7 +279,7 @@ class dna():
         print(self.protein)
 
     def compliment(self):
-        #makes a complimentary strand
+        #makes a complimentary strand names it self.compliment
         for index, na in enumerate(self.seq):
             if na == "a":
                 self.compliment.append("t")
@@ -300,8 +301,16 @@ class dna():
                 print("Error Cannot Compliment")
 
 
-    def search(self, searched_variable):
-        len(searched_variable)
+    def search(self, sequence_search):
+        #searches self.seq for a successive sequence
+        #get length of search
+        length_search = int(len(str(self.sequence_search)))
+        #makelist
+        list_search = list(self.sequence_search)
+        for index_search , str_search in list_search:
+        #self.seq
+        
+        x = range(0,length_search)
 
         #searches the sequence for a pattern returns true
 
