@@ -312,12 +312,20 @@ class dna():
         
         x = range(0,length_search)
 
+        if self.seq["counter"] == str_search
+            if self.seq["counter" + 1] == str_search + 1
+                if self.seq["counter"+2] == str_search + 1
+                    return "counter"
+
+
+
         #searches the sequence for a pattern returns true
 
     def count():
         pass
         #searches the pattern in the instance of the class
         #how many patterns are in the DNA sequence
+        #may be related to search function
 
     def reverse(self):
         #reverse transcribes from RNA to DNA
