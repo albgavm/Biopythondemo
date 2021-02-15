@@ -32,7 +32,8 @@ class dna():
 
     def translate(self):
 
-        #Makes a nested list with codons separated
+    #Makes a nested list with codons separated
+        #Makes list of list with three things in it
         self.codon = []
         self.length = len(self.seq)
         self.codon_number = (self.length // 3)
@@ -307,10 +308,12 @@ class dna():
         length_search = int(len(str(self.sequence_search)))
         #makelist
         list_search = list(self.sequence_search)
-        for index_search , str_search in list_search:
+        for index_search , str_search in enumerate(list_search):
         #self.seq
         
         x = range(0,length_search)
+
+        while
 
         if self.seq["counter"] == str_search
             if self.seq["counter" + 1] == str_search + 1
@@ -342,6 +345,7 @@ class dna():
     def searchstopcodon():
         pass
         #search a stop codon
+        #stop codon is UAG
 
     def searchorf():
         pass
